@@ -14,6 +14,9 @@ function iek_theme() {
     'iek_image_border_summary' => array(
       'variables' => array('data' => NULL, 'effect' => array()),
     ),
+    'iek_image_corner_summary' => array(
+      'variables' => array('data' => NULL, 'effect' => array()),
+    ),
     'iek_image_resize_summary' => array(
       'variables' => array('data' => NULL, 'effect' => array()),
     ),

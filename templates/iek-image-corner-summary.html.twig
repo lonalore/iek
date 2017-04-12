@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a summary of an image effect.
+ *
+ * Available variables:
+ * - data: The current configuration for this effect, including:
+ *   - radius: radius in pixels.
+ * - effect: The effect information, including:
+ *   - id: The effect identifier.
+ *   - label: The effect name.
+ *   - description: The effect description.
+ *
+ * @ingroup themeable
+ */
+#}
+<i>(
+{% if data.radius %}
+  {% trans %}radius{% endtrans %}: <b>{{ data.radius }}px</b>
+{% endif %}
+)</i>
