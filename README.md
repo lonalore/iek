@@ -20,4 +20,4 @@ Drupal 8 module - Provides some image effects to be used on an image styles.
 
 # Screenshot
 
-![Image](https://www.dropbox.com/s/e5kotan2ikq23tr/img01.png?dl=1)
+![Image](https://www.dropbox.com/s/itw0j4ugg2ul9uy/img01.png?dl=1)
