@@ -10,7 +10,7 @@ namespace Drupal\iek\Plugin\ImageToolkit\Operation\gd;
 use Drupal\system\Plugin\ImageToolkit\Operation\gd\GDImageToolkitOperationBase;
 
 /**
- * Defines GD2 IEK Resize operation.
+ * Defines IEK - Resize operation.
  *
  * @ImageToolkitOperation(
  *   id = "gd_iek_image_resize",
@@ -107,7 +107,8 @@ class ImageResize extends GDImageToolkitOperationBase {
       ));
     }
     else {
-      $src_ratio = round($this->getToolkit()->getWidth() / $this->getToolkit()->getHeight(), 8);
+      $src_ratio = round($this->getToolkit()->getWidth() / $this->getToolkit()
+          ->getHeight(), 8);
       $dst_ratio = round($width / $height, 8);
 
       if ($src_ratio >= 1) {
@@ -228,7 +229,10 @@ class ImageResize extends GDImageToolkitOperationBase {
         $dst_y = 0;
     }
 
-    if (!imagecopy($dst, $this->getToolkit()->getResource(), $src_x, $src_y, $dst_x, $dst_y, $this->getToolkit()->getWidth(), $this->getToolkit()->getHeight())) {
+    if (!imagecopy($dst, $this->getToolkit()
+      ->getResource(), $src_x, $src_y, $dst_x, $dst_y, $this->getToolkit()
+      ->getWidth(), $this->getToolkit()->getHeight())
+    ) {
       return FALSE;
     }
 
