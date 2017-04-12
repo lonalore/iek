@@ -1,0 +1,66 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a summary of an image effect.
+ *
+ * Available variables:
+ * - data: The current configuration for this effect, including:
+ *   - text: the text of watermark.
+ *   - font: the font of watermark.
+ *   - color: the font color of watermark.
+ *   - size: the font size of watermark, in pixels.
+ *   - angle: the rotate angle of watermark.
+ *   - position: align position.
+ *   - padding_top: image top padding, in pixels.
+ *   - padding_right: image right padding, in pixels.
+ *   - padding_bottom: image bottom padding, in pixels.
+ *   - padding_left: image left padding, in pixels.
+ * - effect: The effect information, including:
+ *   - id: The effect identifier.
+ *   - label: The effect name.
+ *   - description: The effect description.
+ *
+ * @ingroup themeable
+ */
+#}
+<i>(
+{% if data.text %}
+  {% trans %}text{% endtrans %}: <b>{{ data.text }}</b>,
+{% endif %}
+
+{% if data.font %}
+  {% trans %}font{% endtrans %}: <b>{{ data.font }}</b>,
+{% endif %}
+
+{% if data.color %}
+  {% trans %}color{% endtrans %}: <b>{{ data.color }}</b>,
+{% endif %}
+
+{% if data.size %}
+  {% trans %}size{% endtrans %}: <b>{{ data.size }}px</b>,
+{% endif %}
+
+{% if data.angle %}
+  {% trans %}angle{% endtrans %}: <b>{{ data.angle }}%</b>,
+{% endif %}
+
+{% if data.position %}
+  {% trans %}position{% endtrans %}: <b>{{ data.position }}</b>,
+{% endif %}
+
+{% if data.padding_top %}
+  {% trans %}padding top{% endtrans %}: <b>{{ data.padding_top }}px</b>,
+{% endif %}
+
+{% if data.padding_right %}
+  {% trans %}padding right{% endtrans %}: <b>{{ data.padding_right }}px</b>,
+{% endif %}
+
+{% if data.padding_bottom %}
+  {% trans %}padding bottom{% endtrans %}: <b>{{ data.padding_bottom }}px</b>,
+{% endif %}
+
+{% if data.padding_left %}
+  {% trans %}padding left{% endtrans %}: <b>{{ data.padding_left }}px</b>
+{% endif %}
+)</i>

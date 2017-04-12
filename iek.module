@@ -11,17 +11,148 @@
  */
 function iek_theme() {
   return array(
-    'iek_image_border_summary'  => array(
+    'iek_image_border_summary'    => array(
       'variables' => array('data' => NULL, 'effect' => array()),
     ),
-    'iek_image_corner_summary'  => array(
+    'iek_image_corner_summary'    => array(
       'variables' => array('data' => NULL, 'effect' => array()),
     ),
-    'iek_image_padding_summary' => array(
+    'iek_image_padding_summary'   => array(
       'variables' => array('data' => NULL, 'effect' => array()),
     ),
-    'iek_image_resize_summary'  => array(
+    'iek_image_resize_summary'    => array(
       'variables' => array('data' => NULL, 'effect' => array()),
+    ),
+    'iek_image_watermark_summary' => array(
+      'variables' => array('data' => NULL, 'effect' => array()),
+    ),
+  );
+}
+
+/**
+ * Implements hook_iek_watermark_font().
+ */
+function iek_iek_watermark_font() {
+  $path = drupal_get_path('module', 'iek') . '/fonts';
+
+  return array(
+    'bubble'     => array(
+      'name'  => 'bubble',
+      'title' => t('Bubble'),
+      'file'  => 'bubble.ttf',
+      'path'  => $path,
+    ),
+    'digital'    => array(
+      'name'  => 'digital',
+      'title' => t('Digital'),
+      'file'  => 'digital.ttf',
+      'path'  => $path,
+    ),
+    'snow'       => array(
+      'name'  => 'snow',
+      'title' => t('Snow'),
+      'file'  => 'snow.ttf',
+      'path'  => $path,
+    ),
+    'tuffy_bold' => array(
+      'name'  => 'tuffy_bold',
+      'title' => t('Tuffy Bold'),
+      'file'  => 'tuffy_bold.ttf',
+      'path'  => $path,
+    ),
+    'wedding'    => array(
+      'name'  => 'wedding',
+      'title' => t('Wedding'),
+      'file'  => 'wedding.ttf',
+      'path'  => $path,
+    ),
+  );
+}
+
+/**
+ * Implements hook_iek_overlay().
+ */
+function iek_iek_overlay() {
+  $path = drupal_get_path('module', 'iek') . '/overlays';
+
+  return array(
+    'basic' => array(
+      'name'     => 'basic',
+      'title'    => t('Basic'),
+      'children' => array(
+        'basic_dropshadow_001_1024x768' => array(
+          'name'  => 'basic_dropshadow_001_1024x768',
+          'title' => t('Drop shadow 001 - 1024x768'),
+          'path'  => $path . '/basic',
+          'file'  => 'basic-dropshadow-001-1024x768.png',
+        ),
+        'basic_dropshadow_001_768x1024' => array(
+          'name'  => 'basic_dropshadow_001_768x1024',
+          'title' => t('Drop shadow 001 - 768x1024'),
+          'path'  => $path . '/basic',
+          'file'  => 'basic-dropshadow-001-768x1024.png',
+        ),
+        'basic_dropshadow_001_600x600'  => array(
+          'name'  => 'basic_dropshadow_001_600x600',
+          'title' => t('Drop shadow 001 - 600x600'),
+          'path'  => $path . '/basic',
+          'file'  => 'basic-dropshadow-001-600x600.png',
+        ),
+        'basic_film_001_1024x768'       => array(
+          'name'  => 'basic_film_001_1024x768',
+          'title' => t('Film 001 - 1024x768'),
+          'path'  => $path . '/basic',
+          'file'  => 'basic-film-001-1024x768.png',
+        ),
+        'basic_film_001_768x1024'       => array(
+          'name'  => 'basic_film_001_768x1024',
+          'title' => t('Film 001 - 768x1024'),
+          'path'  => $path . '/basic',
+          'file'  => 'basic-film-001-768x1024.png',
+        ),
+        'basic_film_001_600x600'        => array(
+          'name'  => 'basic_film_001_600x600',
+          'title' => t('Film 001 - 600x600'),
+          'path'  => $path . '/basic',
+          'file'  => 'basic-film-001-600x600.png',
+        ),
+        'basic_overlap_001_1024x768'    => array(
+          'name'  => 'basic_overlap_001_1024x768',
+          'title' => t('Overlap 001 - 1024x768'),
+          'path'  => $path . '/basic',
+          'file'  => 'basic-overlap-001-1024x768.png',
+        ),
+        'basic_overlap_001_768x1024'    => array(
+          'name'  => 'basic_overlap_001_768x1024',
+          'title' => t('Overlap 001 - 768x1024'),
+          'path'  => $path . '/basic',
+          'file'  => 'basic-overlap-001-768x1024.png',
+        ),
+        'basic_overlap_001_600x600'     => array(
+          'name'  => 'basic_overlap_001_600x600',
+          'title' => t('Overlap 001 - 600x600'),
+          'path'  => $path . '/basic',
+          'file'  => 'basic-overlap-001-600x600.png',
+        ),
+        'basic_stamp_001_1024x768'      => array(
+          'name'  => 'basic_stamp_001_1024x768',
+          'title' => t('Stamp 001 - 1024x768'),
+          'path'  => $path . '/basic',
+          'file'  => 'basic-stamp-001-1024x768.png',
+        ),
+        'basic_stamp_001_768x1024'      => array(
+          'name'  => 'basic_stamp_001_768x1024',
+          'title' => t('Stamp 001 - 768x1024'),
+          'path'  => $path . '/basic',
+          'file'  => 'basic-stamp-001-768x1024.png',
+        ),
+        'basic_stamp_001_600x600'       => array(
+          'name'  => 'basic_stamp_001_600x600',
+          'title' => t('Stamp 001 - 600x600'),
+          'path'  => $path . '/basic',
+          'file'  => 'basic-stamp-001-600x600.png',
+        ),
+      ),
     ),
   );
 }
@@ -68,4 +199,124 @@ function iek_hex2rgb($hex_str, $return_as_string = FALSE, $separator = ',') {
 
   // Returns the RGB string or the associative array.
   return $return_as_string ? implode($separator, $rgb_array) : $rgb_array;
+}
+
+/**
+ * Gets a list of available watermark fonts.
+ *
+ * @param string $font_name
+ *   A font name if you just want to get a particular watermark font.
+ *   Leaves empty if you want to get all available watermark fonts.
+ *
+ * @return array
+ *   Particular watermark font if the 'font_name' is given.
+ *   All available watermark fonts otherwise.
+ */
+function iek_get_watermark_fonts($font_name = '') {
+  $fonts = \Drupal::moduleHandler()->invokeAll('iek_watermark_font');
+
+  // Invoke hook_iek_watermark_fonts_alter().
+  // To allow all modules to alter the fonts.
+  \Drupal::moduleHandler()->alter('iek_watermark_font', $fonts);
+
+  if (!empty($font_name)) {
+    if (isset($fonts[$font_name])) {
+      return $fonts[$font_name];
+    }
+    else {
+      return array();
+    }
+  }
+
+  return $fonts;
+}
+
+/**
+ * Gets a list of available image overlays.
+ *
+ * @param string $overlay_name
+ *   A overlay name if you just want to get a particular image overlay.
+ *   Leaves empty if you want to get all available overlays.
+ *
+ * @return array
+ *   Particular overlays if the 'overlay_name' is given.
+ *   All available overlays otherwise.
+ */
+function iek_get_overlays($overlay_name = '') {
+  $overlays = \Drupal::moduleHandler()->invokeAll('iek_overlay');
+
+  // Invoke hook_iek_overlay_alter().
+  // To allow all modules to alter the overlays.
+  \Drupal::moduleHandler()->alter('iek_overlay', $overlays);
+
+  if (!empty($overlay_name)) {
+    foreach ($overlays as $item1) {
+      foreach ($item1['children'] as $item2) {
+        if ($item2['name'] == $overlay_name) {
+          return $item2;
+        }
+      }
+    }
+  }
+
+  return $overlays;
+}
+
+/**
+ * Gets a list of available image filters.
+ *
+ * @return array
+ *   All available filters array.
+ */
+function iek_get_image_filters() {
+  $filters = array(
+    IMG_FILTER_NEGATE         => t('Negate'),
+    IMG_FILTER_GRAYSCALE      => t('Grayscale'),
+    IMG_FILTER_BRIGHTNESS     => t('Brightness'),
+    IMG_FILTER_CONTRAST       => t('Contrast'),
+    IMG_FILTER_COLORIZE       => t('Colorize'),
+    IMG_FILTER_EDGEDETECT     => t('Edgedetect'),
+    IMG_FILTER_EMBOSS         => t('Emboss'),
+    IMG_FILTER_GAUSSIAN_BLUR  => t('Gaussian blur'),
+    IMG_FILTER_SELECTIVE_BLUR => t('Selective blur'),
+    IMG_FILTER_MEAN_REMOVAL   => t('Mean removal'),
+    IMG_FILTER_SMOOTH         => t('Smooth'),
+    // IMG_FILTER_PIXELATE => t('Pixelate'),
+  );
+
+  return $filters;
+}
+
+/**
+ * Creates an image from file or URL.
+ *
+ * @param string $file
+ *   Path to the image.
+ *
+ * @return object
+ *   An image identifier representing the image obtained from the given
+ *   filename.
+ */
+function iek_gd_create_image($file) {
+  $data = @getimagesize($file);
+
+  switch ($data['mime']) {
+    case 'image/jpeg':
+      $image = imagecreatefromjpeg($file);
+      break;
+
+    case 'image/gif':
+      $image = imagecreatefromgif($file);
+      break;
+
+    case 'image/png':
+      $image = imagecreatefrompng($file);
+      break;
+
+    default:
+      $image = NULL;
+      break;
+  }
+
+  return $image;
 }

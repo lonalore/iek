@@ -148,6 +148,7 @@ class ImageResizeEffect extends ConfigurableImageEffectBase {
       '#title'         => $this->t('Align position'),
       '#default_value' => $this->configuration['position'],
       '#options'       => $this->getAlignPositions(),
+      '#required'      => TRUE,
     ];
 
     $form['x'] = [
