@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a summary of an image effect.
+ *
+ * Available variables:
+ * - data: The current configuration for this effect, including:
+ *   - padding_top: image top padding, in pixels.
+ *   - padding_right: image right padding, in pixels.
+ *   - padding_bottom: image bottom padding, in pixels.
+ *   - padding_left: image left padding, in pixels.
+ *   - bg_color: image background color, in Hex format as #cccccc.
+ * - effect: The effect information, including:
+ *   - id: The effect identifier.
+ *   - label: The effect name.
+ *   - description: The effect description.
+ *
+ * @ingroup themeable
+ */
+#}
+<i>(
+{% if data.padding_top %}
+  {% trans %}padding top{% endtrans %}: <b>{{ data.padding_top }}px</b>,
+{% endif %}
+
+{% if data.padding_right %}
+  {% trans %}padding right{% endtrans %}: <b>{{ data.padding_right }}px</b>,
+{% endif %}
+
+{% if data.padding_bottom %}
+  {% trans %}padding bottom{% endtrans %}: <b>{{ data.padding_bottom }}px</b>,
+{% endif %}
+
+{% if data.padding_left %}
+  {% trans %}padding left{% endtrans %}: <b>{{ data.padding_left }}px</b>,
+{% endif %}
+
+{% if data.bg_color %}
+  {% trans %}BG color{% endtrans %}: <b>{{ data.bg_color }}</b>
+{% endif %}
+)</i>

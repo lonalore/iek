@@ -7,7 +7,7 @@ Drupal 8 module - Provides some image effects to be used on an image styles.
 #### It includes the following effects
 - IEK - Border: Add border to an image **(ported)**
 - IEK - Corner: Add rounded corner to an image **(ported)**
-- IEK - Padding: Add padding to an image
+- IEK - Padding: Add padding to an image **(ported)**
 - IEK - Resize: Resize an image with blank margin and positioning **(ported)**
 - IEK - Watermark: Watermark an image with a text
 - IEK - Overlay: Apply a overlay to an image
