@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a summary of an image effect.
+ *
+ * Available variables:
+ * - data: The current configuration for this effect, including:
+ *   - overlay_name: overlay name.
+ *   - overlay_offset: overlay offset, in pixels.
+ *   - bg_offset: background offset, in pixels.
+ * - effect: The effect information, including:
+ *   - id: The effect identifier.
+ *   - label: The effect name.
+ *   - description: The effect description.
+ *
+ * @ingroup themeable
+ */
+#}
+<i>(
+{% if data.overlay_name %}
+  {% trans %}overlay name{% endtrans %}: <b>{{ data.overlay_name }}</b>,
+{% endif %}
+
+{% if data.overlay_offset %}
+  {% trans %}overlay offset{% endtrans %}: <b>{{ data.overlay_offset }}px</b>,
+{% endif %}
+
+{% if data.bg_offset %}
+  {% trans %}background offset{% endtrans %}: <b>{{ data.bg_offset }}px</b>
+{% endif %}
+)</i>

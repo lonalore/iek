@@ -100,6 +100,8 @@ class ImagePadding extends GDImageToolkitOperationBase {
       'blank_margin'          => TRUE,
       'blank_margin_bg_color' => $bg_color,
       'position'              => 'middle_center',
+      'x'                     => 0,
+      'y'                     => 0,
     ]);
 
     if (!imagecopy($dst,

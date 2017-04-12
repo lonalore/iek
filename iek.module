@@ -26,6 +26,9 @@ function iek_theme() {
     'iek_image_watermark_summary' => array(
       'variables' => array('data' => NULL, 'effect' => array()),
     ),
+    'iek_image_overlay_summary'   => array(
+      'variables' => array('data' => NULL, 'effect' => array()),
+    ),
   );
 }
 
@@ -319,4 +322,45 @@ function iek_gd_create_image($file) {
   }
 
   return $image;
+}
+
+/**
+ * Gets details about an image.
+ *
+ * Drupal supports GIF, JPG and PNG file formats when used with the GD
+ * toolkit, and may support others, depending on which toolkits are
+ * installed.
+ *
+ * @param string $filepath
+ *   String specifying the path of the image file.
+ *
+ * @return array|bool
+ *   FALSE, if the file could not be found or is not an image. Otherwise, a
+ *   keyed array containing information about the image:
+ *   - "width": Width, in pixels.
+ *   - "height": Height, in pixels.
+ *   - "mime_type": MIME type ('image/jpeg', 'image/gif', 'image/png').
+ *   - "file_size": File size in bytes.
+ */
+function iek_image_get_info($filepath) {
+  $details = FALSE;
+
+  if (!is_file($filepath) && !is_uploaded_file($filepath)) {
+    return $details;
+  }
+
+  $image = Drupal::service('image.factory')->get($filepath);
+
+  if ($image) {
+    $details = [];
+    $details['width'] = $image->getToolkit()->getWidth();
+    $details['height'] = $image->getToolkit()->getHeight();
+    $details['mime_type'] = $image->getToolkit()->getMimeType();
+  }
+
+  if (isset($details) && is_array($details)) {
+    $details['file_size'] = filesize($filepath);
+  }
+
+  return $details;
 }

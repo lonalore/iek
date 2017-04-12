@@ -107,6 +107,8 @@ class ImageBorder extends GDImageToolkitOperationBase {
       'blank_margin'          => FALSE,
       'blank_margin_bg_color' => $border_color,
       'position'              => 'middle_center',
+      'x'                     => 0,
+      'y'                     => 0,
     ]);
 
     if (!imagecopy($dst,

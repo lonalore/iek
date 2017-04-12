@@ -10,7 +10,7 @@ Drupal 8 module - Provides some image effects to be used on an image styles.
 - IEK - Padding: Add padding to an image **(ported)**
 - IEK - Resize: Resize an image with blank margin and positioning **(ported)**
 - IEK - Watermark: Watermark an image with a text **(ported)**
-- IEK - Overlay: Apply a overlay to an image
+- IEK - Overlay: Apply an overlay to an image **(ported)**
 - IEK - Filter: Apply a filter to an image
 
 #### Requirements
@@ -19,7 +19,5 @@ Drupal 8 module - Provides some image effects to be used on an image styles.
 - GD library
 
 # Screenshot
-
-#### IEK - Resize
 
 ![Image](https://www.dropbox.com/s/nk2u05b8sjkegkg/img01.png?dl=1)
