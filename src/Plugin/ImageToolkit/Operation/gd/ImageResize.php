@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains \Drupal\iek\Plugin\ImageToolkit\Operation\gd\IEKImageResize.
+ * Contains \Drupal\iek\Plugin\ImageToolkit\Operation\gd\ImageResize.
  */
 
 namespace Drupal\iek\Plugin\ImageToolkit\Operation\gd;
@@ -20,7 +20,7 @@ use Drupal\system\Plugin\ImageToolkit\Operation\gd\GDImageToolkitOperationBase;
  *   description = @Translation("Resize an image by using the GD toolkit.")
  * )
  */
-class IEKImageResize extends GDImageToolkitOperationBase {
+class ImageResize extends GDImageToolkitOperationBase {
 
   /**
    * {@inheritdoc}

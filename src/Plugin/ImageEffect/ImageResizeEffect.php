@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains \Drupal\iek\Plugin\ImageEffect\IEKImageResizeEffect.
+ * Contains \Drupal\iek\Plugin\ImageEffect\ImageResizeEffect.
  */
 
 namespace Drupal\iek\Plugin\ImageEffect;
@@ -20,7 +20,7 @@ use Drupal\image\ConfigurableImageEffectBase;
  *   description = @Translation("Resize an image by using the GD toolkit.")
  * )
  */
-class IEKImageResizeEffect extends ConfigurableImageEffectBase {
+class ImageResizeEffect extends ConfigurableImageEffectBase {
 
   /**
    * {@inheritdoc}
