@@ -17,7 +17,7 @@ use Drupal\image\ConfigurableImageEffectBase;
  * @ImageEffect(
  *   id = "iek_image_overlay",
  *   label = @Translation("IEK - Overlay"),
- *   description = @Translation("Add a watermark text on an image.")
+ *   description = @Translation("Apply an overlay to an image.")
  * )
  */
 class ImageOverlayEffect extends ConfigurableImageEffectBase {

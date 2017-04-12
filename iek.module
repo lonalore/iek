@@ -29,6 +29,9 @@ function iek_theme() {
     'iek_image_overlay_summary'   => array(
       'variables' => array('data' => NULL, 'effect' => array()),
     ),
+    'iek_image_filter_summary'   => array(
+      'variables' => array('data' => NULL, 'effect' => array()),
+    ),
   );
 }
 

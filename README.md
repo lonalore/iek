@@ -11,7 +11,7 @@ Drupal 8 module - Provides some image effects to be used on an image styles.
 - IEK - Resize: Resize an image with blank margin and positioning **(ported)**
 - IEK - Watermark: Watermark an image with a text **(ported)**
 - IEK - Overlay: Apply an overlay to an image **(ported)**
-- IEK - Filter: Apply a filter to an image
+- IEK - Filter: Apply a filter to an image **(ported)**
 
 #### Requirements
 - Drupal 8

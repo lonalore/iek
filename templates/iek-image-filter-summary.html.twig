@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a summary of an image effect.
+ *
+ * Available variables:
+ * - data: The current configuration for this effect, including:
+ *   - filter_name: filter name.
+ *   - repeat: how many times do you want to repeat the filter action.
+ *   - arg1: argument 1.
+ *   - arg2: argument 2.
+ *   - arg3: argument 3.
+ *   - arg4: argument 4.
+ * - effect: The effect information, including:
+ *   - id: The effect identifier.
+ *   - label: The effect name.
+ *   - description: The effect description.
+ *
+ * @ingroup themeable
+ */
+#}
+<i>(
+{% if data.filter_name %}
+  {% trans %}filter name{% endtrans %}: <b>{{ data.filter_name }}</b>,
+{% endif %}
+
+{% if data.repeat %}
+  {% trans %}repeat{% endtrans %}: <b>{{ data.repeat }}x</b>,
+{% endif %}
+
+{% if data.arg1 %}
+  {% trans %}arg1{% endtrans %}: <b>{{ data.arg1 }}</b>,
+{% endif %}
+
+{% if data.arg2 %}
+  {% trans %}arg2{% endtrans %}: <b>{{ data.arg2 }}</b>,
+{% endif %}
+
+{% if data.arg3 %}
+  {% trans %}arg3{% endtrans %}: <b>{{ data.arg3 }}</b>,
+{% endif %}
+
+{% if data.arg4 %}
+  {% trans %}arg4{% endtrans %}: <b>{{ data.arg4 }}</b>
+{% endif %}
+)</i>

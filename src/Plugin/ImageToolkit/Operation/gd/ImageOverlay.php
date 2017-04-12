@@ -17,7 +17,7 @@ use Drupal\system\Plugin\ImageToolkit\Operation\gd\GDImageToolkitOperationBase;
  *   toolkit = "gd",
  *   operation = "iek_image_overlay",
  *   label = @Translation("IEK - Overlay"),
- *   description = @Translation("Add an overlay to an image.")
+ *   description = @Translation("Apply an overlay to an image.")
  * )
  */
 class ImageOverlay extends GDImageToolkitOperationBase {
