@@ -22,4 +22,4 @@ Drupal 8 module - Provides some image effects to be used on an image styles.
 
 #### IEK - Resize
 
-![Image](https://www.dropbox.com/s/wonuekqlqk4r71e/img01.png?dl=1)
+![Image](https://www.dropbox.com/s/nk2u05b8sjkegkg/img01.png?dl=1)
