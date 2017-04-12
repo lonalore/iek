@@ -1,0 +1,7 @@
+name: IEK - Image Effect Kit
+description: Provides custom image effects.
+type: module
+package: Custom
+core: 8.x
+dependencies:
+  - image

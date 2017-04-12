@@ -1,0 +1,65 @@
+<?php
+
+/**
+ * @file
+ * Contains "iek" module.
+ */
+
+
+/**
+ * Implements hook_theme().
+ */
+function iek_theme() {
+  return array(
+    'iek_image_border_summary' => array(
+      'variables' => array('data' => NULL, 'effect' => array()),
+    ),
+    'iek_image_resize_summary' => array(
+      'variables' => array('data' => NULL, 'effect' => array()),
+    ),
+  );
+}
+
+/**
+ * Converts color format from Hex to RGB.
+ *
+ * @param string $hex_str
+ *   A Hex color format like '#cccccc'.
+ * @param bool $return_as_string
+ *   A boolean flag to indicate to return a string or an array.
+ * @param string $separator
+ *   A character or string to join the RGB array elements.
+ *
+ * @return array
+ *   An associative RGB array if 'return_as_string' is set to FALSE.
+ * @return string
+ *   A RGB string that was split by the 'separator' will be returned
+ *   if 'return_as_string' is set to TRUE.
+ * @return bool
+ *   Return FALSE if an invalid Hex color code.
+ */
+function iek_hex2rgb($hex_str, $return_as_string = FALSE, $separator = ',') {
+  // Gets a proper Hex string.
+  $hex_str = preg_replace("/[^0-9A-Fa-f]/", '', $hex_str);
+  $rgb_array = array();
+  // If a proper Hex code, convert using bitwise operation.
+  if (strlen($hex_str) == 6) {
+    $border_color_val = hexdec($hex_str);
+    $rgb_array['red'] = 0xFF & ($border_color_val >> 0x10);
+    $rgb_array['green'] = 0xFF & ($border_color_val >> 0x8);
+    $rgb_array['blue'] = 0xFF & $border_color_val;
+  }
+  // If shorthand notation, need some string manipulations.
+  elseif (strlen($hex_str) == 3) {
+    $rgb_array['red'] = hexdec(str_repeat(substr($hex_str, 0, 1), 2));
+    $rgb_array['green'] = hexdec(str_repeat(substr($hex_str, 1, 1), 2));
+    $rgb_array['blue'] = hexdec(str_repeat(substr($hex_str, 2, 1), 2));
+  }
+  else {
+    // Invalid Hex color code.
+    return FALSE;
+  }
+
+  // Returns the RGB string or the associative array.
+  return $return_as_string ? implode($separator, $rgb_array) : $rgb_array;
+}

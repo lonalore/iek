@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a summary of an image resize effect.
+ *
+ * Available variables:
+ * - data: The current configuration for this resize effect, including:
+ *   - width: The width of the resized image.
+ *   - height: The height of the resized image.
+ *   - blank_margin: Blank margin.
+ *   - blank_margin_bg_color: Blank margin background color.
+ *   - position: Align position.
+ * - effect: The effect information, including:
+ *   - id: The effect identifier.
+ *   - label: The effect name.
+ *   - description: The effect description.
+ *
+ * @ingroup themeable
+ */
+#}
+<i>
+{% if data.width %}
+  {% trans %}width{% endtrans %}: <b>{{ data.width }}px</b>,
+{% endif %}
+
+{% if data.height %}
+  {% trans %}height{% endtrans %}: <b>{{ data.height }}px</b>,
+{% endif %}
+
+{% if data.blank_margin %}
+  {% trans %}blank margin{% endtrans %}: <b>{{ data.blank_margin }}</b>,
+{% endif %}
+
+{% if data.blank_margin_bg_color %}
+  {% trans %}BG color{% endtrans %}: <b>{{ data.blank_margin_bg_color }}</b>,
+{% endif %}
+
+{% if data.position %}
+  {% trans %}position{% endtrans %}: <b>{{ data.position }}</b>
+{% endif %}
+</i>
