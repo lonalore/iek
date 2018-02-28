@@ -10,29 +10,29 @@
  * Implements hook_theme().
  */
 function iek_theme() {
-  return array(
-    'iek_image_border_summary'    => array(
-      'variables' => array('data' => NULL, 'effect' => array()),
-    ),
-    'iek_image_corner_summary'    => array(
-      'variables' => array('data' => NULL, 'effect' => array()),
-    ),
-    'iek_image_padding_summary'   => array(
-      'variables' => array('data' => NULL, 'effect' => array()),
-    ),
-    'iek_image_resize_summary'    => array(
-      'variables' => array('data' => NULL, 'effect' => array()),
-    ),
-    'iek_image_watermark_summary' => array(
-      'variables' => array('data' => NULL, 'effect' => array()),
-    ),
-    'iek_image_overlay_summary'   => array(
-      'variables' => array('data' => NULL, 'effect' => array()),
-    ),
-    'iek_image_filter_summary'   => array(
-      'variables' => array('data' => NULL, 'effect' => array()),
-    ),
-  );
+  return [
+    'iek_image_border_summary' => [
+      'variables' => ['data' => NULL, 'effect' => []],
+    ],
+    'iek_image_corner_summary' => [
+      'variables' => ['data' => NULL, 'effect' => []],
+    ],
+    'iek_image_padding_summary' => [
+      'variables' => ['data' => NULL, 'effect' => []],
+    ],
+    'iek_image_resize_summary' => [
+      'variables' => ['data' => NULL, 'effect' => []],
+    ],
+    'iek_image_watermark_summary' => [
+      'variables' => ['data' => NULL, 'effect' => []],
+    ],
+    'iek_image_overlay_summary' => [
+      'variables' => ['data' => NULL, 'effect' => []],
+    ],
+    'iek_image_filter_summary' => [
+      'variables' => ['data' => NULL, 'effect' => []],
+    ],
+  ];
 }
 
 /**
@@ -41,38 +41,38 @@ function iek_theme() {
 function iek_iek_watermark_font() {
   $path = drupal_get_path('module', 'iek') . '/fonts';
 
-  return array(
-    'bubble'     => array(
-      'name'  => 'bubble',
+  return [
+    'bubble' => [
+      'name' => 'bubble',
       'title' => t('Bubble'),
-      'file'  => 'bubble.ttf',
-      'path'  => $path,
-    ),
-    'digital'    => array(
-      'name'  => 'digital',
+      'file' => 'bubble.ttf',
+      'path' => $path,
+    ],
+    'digital' => [
+      'name' => 'digital',
       'title' => t('Digital'),
-      'file'  => 'digital.ttf',
-      'path'  => $path,
-    ),
-    'snow'       => array(
-      'name'  => 'snow',
+      'file' => 'digital.ttf',
+      'path' => $path,
+    ],
+    'snow' => [
+      'name' => 'snow',
       'title' => t('Snow'),
-      'file'  => 'snow.ttf',
-      'path'  => $path,
-    ),
-    'tuffy_bold' => array(
-      'name'  => 'tuffy_bold',
+      'file' => 'snow.ttf',
+      'path' => $path,
+    ],
+    'tuffy_bold' => [
+      'name' => 'tuffy_bold',
       'title' => t('Tuffy Bold'),
-      'file'  => 'tuffy_bold.ttf',
-      'path'  => $path,
-    ),
-    'wedding'    => array(
-      'name'  => 'wedding',
+      'file' => 'tuffy_bold.ttf',
+      'path' => $path,
+    ],
+    'wedding' => [
+      'name' => 'wedding',
       'title' => t('Wedding'),
-      'file'  => 'wedding.ttf',
-      'path'  => $path,
-    ),
-  );
+      'file' => 'wedding.ttf',
+      'path' => $path,
+    ],
+  ];
 }
 
 /**
@@ -81,86 +81,86 @@ function iek_iek_watermark_font() {
 function iek_iek_overlay() {
   $path = drupal_get_path('module', 'iek') . '/overlays';
 
-  return array(
-    'basic' => array(
-      'name'     => 'basic',
-      'title'    => t('Basic'),
-      'children' => array(
-        'basic_dropshadow_001_1024x768' => array(
-          'name'  => 'basic_dropshadow_001_1024x768',
+  return [
+    'basic' => [
+      'name' => 'basic',
+      'title' => t('Basic'),
+      'children' => [
+        'basic_dropshadow_001_1024x768' => [
+          'name' => 'basic_dropshadow_001_1024x768',
           'title' => t('Drop shadow 001 - 1024x768'),
-          'path'  => $path . '/basic',
-          'file'  => 'basic-dropshadow-001-1024x768.png',
-        ),
-        'basic_dropshadow_001_768x1024' => array(
-          'name'  => 'basic_dropshadow_001_768x1024',
+          'path' => $path . '/basic',
+          'file' => 'basic-dropshadow-001-1024x768.png',
+        ],
+        'basic_dropshadow_001_768x1024' => [
+          'name' => 'basic_dropshadow_001_768x1024',
           'title' => t('Drop shadow 001 - 768x1024'),
-          'path'  => $path . '/basic',
-          'file'  => 'basic-dropshadow-001-768x1024.png',
-        ),
-        'basic_dropshadow_001_600x600'  => array(
-          'name'  => 'basic_dropshadow_001_600x600',
+          'path' => $path . '/basic',
+          'file' => 'basic-dropshadow-001-768x1024.png',
+        ],
+        'basic_dropshadow_001_600x600' => [
+          'name' => 'basic_dropshadow_001_600x600',
           'title' => t('Drop shadow 001 - 600x600'),
-          'path'  => $path . '/basic',
-          'file'  => 'basic-dropshadow-001-600x600.png',
-        ),
-        'basic_film_001_1024x768'       => array(
-          'name'  => 'basic_film_001_1024x768',
+          'path' => $path . '/basic',
+          'file' => 'basic-dropshadow-001-600x600.png',
+        ],
+        'basic_film_001_1024x768' => [
+          'name' => 'basic_film_001_1024x768',
           'title' => t('Film 001 - 1024x768'),
-          'path'  => $path . '/basic',
-          'file'  => 'basic-film-001-1024x768.png',
-        ),
-        'basic_film_001_768x1024'       => array(
-          'name'  => 'basic_film_001_768x1024',
+          'path' => $path . '/basic',
+          'file' => 'basic-film-001-1024x768.png',
+        ],
+        'basic_film_001_768x1024' => [
+          'name' => 'basic_film_001_768x1024',
           'title' => t('Film 001 - 768x1024'),
-          'path'  => $path . '/basic',
-          'file'  => 'basic-film-001-768x1024.png',
-        ),
-        'basic_film_001_600x600'        => array(
-          'name'  => 'basic_film_001_600x600',
+          'path' => $path . '/basic',
+          'file' => 'basic-film-001-768x1024.png',
+        ],
+        'basic_film_001_600x600' => [
+          'name' => 'basic_film_001_600x600',
           'title' => t('Film 001 - 600x600'),
-          'path'  => $path . '/basic',
-          'file'  => 'basic-film-001-600x600.png',
-        ),
-        'basic_overlap_001_1024x768'    => array(
-          'name'  => 'basic_overlap_001_1024x768',
+          'path' => $path . '/basic',
+          'file' => 'basic-film-001-600x600.png',
+        ],
+        'basic_overlap_001_1024x768' => [
+          'name' => 'basic_overlap_001_1024x768',
           'title' => t('Overlap 001 - 1024x768'),
-          'path'  => $path . '/basic',
-          'file'  => 'basic-overlap-001-1024x768.png',
-        ),
-        'basic_overlap_001_768x1024'    => array(
-          'name'  => 'basic_overlap_001_768x1024',
+          'path' => $path . '/basic',
+          'file' => 'basic-overlap-001-1024x768.png',
+        ],
+        'basic_overlap_001_768x1024' => [
+          'name' => 'basic_overlap_001_768x1024',
           'title' => t('Overlap 001 - 768x1024'),
-          'path'  => $path . '/basic',
-          'file'  => 'basic-overlap-001-768x1024.png',
-        ),
-        'basic_overlap_001_600x600'     => array(
-          'name'  => 'basic_overlap_001_600x600',
+          'path' => $path . '/basic',
+          'file' => 'basic-overlap-001-768x1024.png',
+        ],
+        'basic_overlap_001_600x600' => [
+          'name' => 'basic_overlap_001_600x600',
           'title' => t('Overlap 001 - 600x600'),
-          'path'  => $path . '/basic',
-          'file'  => 'basic-overlap-001-600x600.png',
-        ),
-        'basic_stamp_001_1024x768'      => array(
-          'name'  => 'basic_stamp_001_1024x768',
+          'path' => $path . '/basic',
+          'file' => 'basic-overlap-001-600x600.png',
+        ],
+        'basic_stamp_001_1024x768' => [
+          'name' => 'basic_stamp_001_1024x768',
           'title' => t('Stamp 001 - 1024x768'),
-          'path'  => $path . '/basic',
-          'file'  => 'basic-stamp-001-1024x768.png',
-        ),
-        'basic_stamp_001_768x1024'      => array(
-          'name'  => 'basic_stamp_001_768x1024',
+          'path' => $path . '/basic',
+          'file' => 'basic-stamp-001-1024x768.png',
+        ],
+        'basic_stamp_001_768x1024' => [
+          'name' => 'basic_stamp_001_768x1024',
           'title' => t('Stamp 001 - 768x1024'),
-          'path'  => $path . '/basic',
-          'file'  => 'basic-stamp-001-768x1024.png',
-        ),
-        'basic_stamp_001_600x600'       => array(
-          'name'  => 'basic_stamp_001_600x600',
+          'path' => $path . '/basic',
+          'file' => 'basic-stamp-001-768x1024.png',
+        ],
+        'basic_stamp_001_600x600' => [
+          'name' => 'basic_stamp_001_600x600',
           'title' => t('Stamp 001 - 600x600'),
-          'path'  => $path . '/basic',
-          'file'  => 'basic-stamp-001-600x600.png',
-        ),
-      ),
-    ),
-  );
+          'path' => $path . '/basic',
+          'file' => 'basic-stamp-001-600x600.png',
+        ],
+      ],
+    ],
+  ];
 }
 
 /**
@@ -173,18 +173,16 @@ function iek_iek_overlay() {
  * @param string $separator
  *   A character or string to join the RGB array elements.
  *
- * @return array
- *   An associative RGB array if 'return_as_string' is set to FALSE.
- * @return string
- *   A RGB string that was split by the 'separator' will be returned
- *   if 'return_as_string' is set to TRUE.
- * @return bool
- *   Return FALSE if an invalid Hex color code.
+ * @return array|string|bool
+ *   - An associative RGB array if 'return_as_string' is set to FALSE.
+ *   - A RGB string that was split by the 'separator' will be returned if
+ *     'return_as_string' is set to TRUE.
+ *   - Return FALSE if an invalid Hex color code.
  */
 function iek_hex2rgb($hex_str, $return_as_string = FALSE, $separator = ',') {
   // Gets a proper Hex string.
   $hex_str = preg_replace("/[^0-9A-Fa-f]/", '', $hex_str);
-  $rgb_array = array();
+  $rgb_array = [];
   // If a proper Hex code, convert using bitwise operation.
   if (strlen($hex_str) == 6) {
     $border_color_val = hexdec($hex_str);
@@ -230,7 +228,7 @@ function iek_get_watermark_fonts($font_name = '') {
       return $fonts[$font_name];
     }
     else {
-      return array();
+      return [];
     }
   }
 
@@ -275,20 +273,20 @@ function iek_get_overlays($overlay_name = '') {
  *   All available filters array.
  */
 function iek_get_image_filters() {
-  $filters = array(
-    IMG_FILTER_NEGATE         => t('Negate'),
-    IMG_FILTER_GRAYSCALE      => t('Grayscale'),
-    IMG_FILTER_BRIGHTNESS     => t('Brightness'),
-    IMG_FILTER_CONTRAST       => t('Contrast'),
-    IMG_FILTER_COLORIZE       => t('Colorize'),
-    IMG_FILTER_EDGEDETECT     => t('Edgedetect'),
-    IMG_FILTER_EMBOSS         => t('Emboss'),
-    IMG_FILTER_GAUSSIAN_BLUR  => t('Gaussian blur'),
+  $filters = [
+    IMG_FILTER_NEGATE => t('Negate'),
+    IMG_FILTER_GRAYSCALE => t('Grayscale'),
+    IMG_FILTER_BRIGHTNESS => t('Brightness'),
+    IMG_FILTER_CONTRAST => t('Contrast'),
+    IMG_FILTER_COLORIZE => t('Colorize'),
+    IMG_FILTER_EDGEDETECT => t('Edgedetect'),
+    IMG_FILTER_EMBOSS => t('Emboss'),
+    IMG_FILTER_GAUSSIAN_BLUR => t('Gaussian blur'),
     IMG_FILTER_SELECTIVE_BLUR => t('Selective blur'),
-    IMG_FILTER_MEAN_REMOVAL   => t('Mean removal'),
-    IMG_FILTER_SMOOTH         => t('Smooth'),
+    IMG_FILTER_MEAN_REMOVAL => t('Mean removal'),
+    IMG_FILTER_SMOOTH => t('Smooth'),
     // IMG_FILTER_PIXELATE => t('Pixelate'),
-  );
+  ];
 
   return $filters;
 }
@@ -299,7 +297,7 @@ function iek_get_image_filters() {
  * @param string $file
  *   Path to the image.
  *
- * @return object
+ * @return resource|NULL
  *   An image identifier representing the image obtained from the given
  *   filename.
  */

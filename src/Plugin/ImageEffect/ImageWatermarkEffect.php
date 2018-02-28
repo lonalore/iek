@@ -100,7 +100,7 @@ class ImageWatermarkEffect extends ConfigurableImageEffectBase {
    */
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $iek_fonts = iek_get_watermark_fonts();
-    $fonts = array();
+    $fonts = [];
 
     foreach ($iek_fonts as $item) {
       $fonts[$item['name']] = $item['title'];

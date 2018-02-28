@@ -26,38 +26,38 @@ class ImageWatermark extends GDImageToolkitOperationBase {
    * {@inheritdoc}
    */
   protected function arguments() {
-    return array(
-      'text'           => array(
+    return [
+      'text' => [
         'description' => 'Text',
-      ),
-      'font'           => array(
+      ],
+      'font' => [
         'description' => 'Font',
-      ),
-      'color'          => array(
+      ],
+      'color' => [
         'description' => 'Color',
-      ),
-      'size'           => array(
+      ],
+      'size' => [
         'description' => 'Size',
-      ),
-      'angle'          => array(
+      ],
+      'angle' => [
         'description' => 'Angle',
-      ),
-      'position'       => array(
+      ],
+      'position' => [
         'description' => 'Position',
-      ),
-      'padding_top'    => array(
+      ],
+      'padding_top' => [
         'description' => 'Padding top',
-      ),
-      'padding_right'  => array(
+      ],
+      'padding_right' => [
         'description' => 'Padding right',
-      ),
-      'padding_bottom' => array(
+      ],
+      'padding_bottom' => [
         'description' => 'Padding bottom',
-      ),
-      'padding_left'   => array(
+      ],
+      'padding_left' => [
         'description' => 'Padding left',
-      ),
-    );
+      ],
+    ];
   }
 
   /**
@@ -108,7 +108,7 @@ class ImageWatermark extends GDImageToolkitOperationBase {
   /**
    * {@inheritdoc}
    */
-  protected function execute(array $arguments = array()) {
+  protected function execute(array $arguments = []) {
     $data = $arguments;
 
     $width = $this->getToolkit()->getWidth();
@@ -141,7 +141,7 @@ class ImageWatermark extends GDImageToolkitOperationBase {
     }
     $bbox_character_height = ceil($bbox_height);
 
-    $text_arr = array();
+    $text_arr = [];
     if ($bbox_character_width) {
       $text_arr = chunk_split($text, ceil(($width - abs(($padding_left + $padding_right) * 2)) / $bbox_character_width), ':::');
       $text_arr = explode(':::', $text_arr);

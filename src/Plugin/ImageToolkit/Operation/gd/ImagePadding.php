@@ -26,23 +26,23 @@ class ImagePadding extends GDImageToolkitOperationBase {
    * {@inheritdoc}
    */
   protected function arguments() {
-    return array(
-      'padding_top'    => array(
+    return [
+      'padding_top' => [
         'description' => 'Padding top',
-      ),
-      'padding_right'  => array(
+      ],
+      'padding_right' => [
         'description' => 'Padding right',
-      ),
-      'padding_bottom' => array(
+      ],
+      'padding_bottom' => [
         'description' => 'Padding bottom',
-      ),
-      'padding_left'   => array(
+      ],
+      'padding_left' => [
         'description' => 'Padding left',
-      ),
-      'bg_color'       => array(
+      ],
+      'bg_color' => [
         'description' => 'Background color',
-      ),
-    );
+      ],
+    ];
   }
 
   /**
@@ -77,7 +77,7 @@ class ImagePadding extends GDImageToolkitOperationBase {
   /**
    * {@inheritdoc}
    */
-  protected function execute(array $arguments = array()) {
+  protected function execute(array $arguments = []) {
     $data = $arguments;
 
     $width = $this->getToolkit()->getWidth();
@@ -95,13 +95,13 @@ class ImagePadding extends GDImageToolkitOperationBase {
     imagefilledrectangle($dst, 0, 0, $width, $height, $bg);
 
     $this->getToolkit()->apply('iek_image_resize', [
-      'width'                 => $width - ($padding_left + $padding_right),
-      'height'                => $height - ($padding_top + $padding_bottom),
-      'blank_margin'          => TRUE,
+      'width' => $width - ($padding_left + $padding_right),
+      'height' => $height - ($padding_top + $padding_bottom),
+      'blank_margin' => TRUE,
       'blank_margin_bg_color' => $bg_color,
-      'position'              => 'middle_center',
-      'x'                     => 0,
-      'y'                     => 0,
+      'position' => 'middle_center',
+      'x' => 0,
+      'y' => 0,
     ]);
 
     if (!imagecopy($dst,

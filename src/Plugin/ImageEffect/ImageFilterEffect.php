@@ -92,8 +92,8 @@ class ImageFilterEffect extends ConfigurableImageEffectBase {
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $filters = iek_get_image_filters();
 
-    $int127 = array();
-    $int255 = array();
+    $int127 = [];
+    $int255 = [];
     for ($i = 0; $i <= 255; $i++) {
       if ($i <= 127) {
         $int127[$i] = $i;
@@ -109,14 +109,14 @@ class ImageFilterEffect extends ConfigurableImageEffectBase {
       '#required'      => TRUE,
     ];
 
-    $form['repeat'] = array(
+    $form['repeat'] = [
       '#type'          => 'select',
       '#options'       => $int255,
       '#title'         => $this->t('Repeat'),
       '#description'   => $this->t('How many times do you want to repeat the filter action? Caution: higher repeat times will cause your site performance issue.'),
       '#default_value' => $this->configuration['repeat'],
       '#required'      => TRUE,
-    );
+    ];
 
     $form['arg1'] = [
       '#type'          => 'select',

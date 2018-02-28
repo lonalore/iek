@@ -26,17 +26,17 @@ class ImageOverlay extends GDImageToolkitOperationBase {
    * {@inheritdoc}
    */
   protected function arguments() {
-    return array(
-      'overlay_name'   => array(
+    return [
+      'overlay_name' => [
         'description' => 'Overlay name',
-      ),
-      'overlay_offset' => array(
+      ],
+      'overlay_offset' => [
         'description' => 'Overlay offset',
-      ),
-      'bg_offset'      => array(
+      ],
+      'bg_offset' => [
         'description' => 'Background offset',
-      ),
-    );
+      ],
+    ];
   }
 
   /**
@@ -59,7 +59,7 @@ class ImageOverlay extends GDImageToolkitOperationBase {
   /**
    * {@inheritdoc}
    */
-  protected function execute(array $arguments = array()) {
+  protected function execute(array $arguments = []) {
     $data = $arguments;
 
     $iek_overlay = iek_get_overlays($data['overlay_name']);

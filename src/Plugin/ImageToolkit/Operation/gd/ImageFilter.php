@@ -26,26 +26,26 @@ class ImageFilter extends GDImageToolkitOperationBase {
    * {@inheritdoc}
    */
   protected function arguments() {
-    return array(
-      'filter_name' => array(
+    return [
+      'filter_name' => [
         'description' => 'Filter name',
-      ),
-      'repeat'      => array(
+      ],
+      'repeat' => [
         'description' => 'Repeat',
-      ),
-      'arg1'        => array(
+      ],
+      'arg1' => [
         'description' => 'arg1',
-      ),
-      'arg2'        => array(
+      ],
+      'arg2' => [
         'description' => 'arg2',
-      ),
-      'arg3'        => array(
+      ],
+      'arg3' => [
         'description' => 'arg3',
-      ),
-      'arg4'        => array(
+      ],
+      'arg4' => [
         'description' => 'arg4',
-      ),
-    );
+      ],
+    ];
   }
 
   /**
@@ -63,7 +63,7 @@ class ImageFilter extends GDImageToolkitOperationBase {
   /**
    * {@inheritdoc}
    */
-  protected function execute(array $arguments = array()) {
+  protected function execute(array $arguments = []) {
     $data = $arguments;
 
     $filter_name = $data['filter_name'];

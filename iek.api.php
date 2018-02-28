@@ -12,14 +12,14 @@
 function hook_iek_watermark_font() {
   $path = drupal_get_path('module', 'iek') . '/fonts';
 
-  return array(
-    'a_cut_above_the_rest' => array(
-      'name'  => 'a_cut_above_the_rest',
+  return [
+    'a_cut_above_the_rest' => [
+      'name' => 'a_cut_above_the_rest',
       'title' => t('A Cut Above The Rest'),
-      'file'  => 'a_cut_above_the_rest.ttf',
-      'path'  => $path,
-    ),
-  );
+      'file' => 'a_cut_above_the_rest.ttf',
+      'path' => $path,
+    ],
+  ];
 }
 
 /**
@@ -37,32 +37,32 @@ function hook_iek_watermark_font_alter(&$fonts) {
 function hook_iek_overlay() {
   $path = drupal_get_path('module', 'iek') . '/overlays';
 
-  return array(
-    'basic' => array(
-      'name'     => 'basic',
-      'title'    => t('Basic'),
-      'children' => array(
-        'basic_001_1024x768' => array(
-          'name'  => 'basic_001_1024x768',
+  return [
+    'basic' => [
+      'name' => 'basic',
+      'title' => t('Basic'),
+      'children' => [
+        'basic_001_1024x768' => [
+          'name' => 'basic_001_1024x768',
           'title' => t('Basic 001 - 1024x768'),
-          'path'  => $path . '/basic',
-          'file'  => 'basic-001-1024x768.png',
-        ),
-        'basic_001_768x1024' => array(
-          'name'  => 'basic_001_768x1024',
+          'path' => $path . '/basic',
+          'file' => 'basic-001-1024x768.png',
+        ],
+        'basic_001_768x1024' => [
+          'name' => 'basic_001_768x1024',
           'title' => t('Basic 001 - 768x1024'),
-          'path'  => $path . '/basic',
-          'file'  => 'basic-001-768x1024.png',
-        ),
-        'basic_001_600x600'  => array(
-          'name'  => 'basic_001_600x600',
+          'path' => $path . '/basic',
+          'file' => 'basic-001-768x1024.png',
+        ],
+        'basic_001_600x600' => [
+          'name' => 'basic_001_600x600',
           'title' => t('Basic 001 - 600x600'),
-          'path'  => $path . '/basic',
-          'file'  => 'basic-001-600x600.png',
-        ),
-      ),
-    ),
-  );
+          'path' => $path . '/basic',
+          'file' => 'basic-001-600x600.png',
+        ],
+      ],
+    ],
+  ];
 }
 
 /**

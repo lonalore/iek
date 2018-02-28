@@ -26,23 +26,23 @@ class ImageBorder extends GDImageToolkitOperationBase {
    * {@inheritdoc}
    */
   protected function arguments() {
-    return array(
-      'border_color'        => array(
+    return [
+      'border_color' => [
         'description' => 'Border color',
-      ),
-      'border_thick_top'    => array(
+      ],
+      'border_thick_top' => [
         'description' => 'Border thick - top',
-      ),
-      'border_thick_right'  => array(
+      ],
+      'border_thick_right' => [
         'description' => 'Border thick - right',
-      ),
-      'border_thick_bottom' => array(
+      ],
+      'border_thick_bottom' => [
         'description' => 'Border thick - bottom',
-      ),
-      'border_thick_left'   => array(
+      ],
+      'border_thick_left' => [
         'description' => 'Border thick - left',
-      ),
-    );
+      ],
+    ];
   }
 
   /**
@@ -77,7 +77,7 @@ class ImageBorder extends GDImageToolkitOperationBase {
   /**
    * {@inheritdoc}
    */
-  protected function execute(array $arguments = array()) {
+  protected function execute(array $arguments = []) {
     $data = $arguments;
 
     $border_color = $data['border_color'];
@@ -102,13 +102,13 @@ class ImageBorder extends GDImageToolkitOperationBase {
     imagefilledrectangle($dst, $border_thick_left, $border_thick_top, $width - $border_thick_right - 1, $height - $border_thick_bottom - 1, $bg);
 
     $this->getToolkit()->apply('iek_image_resize', [
-      'width'                 => $width - ($border_thick_left + $border_thick_right),
-      'height'                => $height - ($border_thick_top + $border_thick_bottom),
-      'blank_margin'          => FALSE,
+      'width' => $width - ($border_thick_left + $border_thick_right),
+      'height' => $height - ($border_thick_top + $border_thick_bottom),
+      'blank_margin' => FALSE,
       'blank_margin_bg_color' => $border_color,
-      'position'              => 'middle_center',
-      'x'                     => 0,
-      'y'                     => 0,
+      'position' => 'middle_center',
+      'x' => 0,
+      'y' => 0,
     ]);
 
     if (!imagecopy($dst,

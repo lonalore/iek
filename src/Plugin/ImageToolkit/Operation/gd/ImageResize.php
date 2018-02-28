@@ -26,29 +26,29 @@ class ImageResize extends GDImageToolkitOperationBase {
    * {@inheritdoc}
    */
   protected function arguments() {
-    return array(
-      'width'                 => array(
+    return [
+      'width' => [
         'description' => 'Width',
-      ),
-      'height'                => array(
+      ],
+      'height' => [
         'description' => 'Height',
-      ),
-      'blank_margin'          => array(
+      ],
+      'blank_margin' => [
         'description' => 'Blank margin',
-      ),
-      'blank_margin_bg_color' => array(
+      ],
+      'blank_margin_bg_color' => [
         'description' => 'Blank margin background color',
-      ),
-      'position'              => array(
+      ],
+      'position' => [
         'description' => 'Align position',
-      ),
-      'x'                     => array(
+      ],
+      'x' => [
         'description' => 'X-axis',
-      ),
-      'y'                     => array(
+      ],
+      'y' => [
         'description' => 'Y-axis',
-      ),
-    );
+      ],
+    ];
   }
 
   /**
@@ -81,7 +81,7 @@ class ImageResize extends GDImageToolkitOperationBase {
   /**
    * {@inheritdoc}
    */
-  protected function execute(array $arguments = array()) {
+  protected function execute(array $arguments = []) {
     $data = $arguments;
 
     if ($data['width'] < 0 || $data['height'] < 0) {
@@ -100,11 +100,11 @@ class ImageResize extends GDImageToolkitOperationBase {
     imagefilledrectangle($dst, 0, 0, $width, $height, $bg);
 
     if ($blank_margin) {
-      $this->getToolkit()->apply('scale', array(
-        'width'   => $width,
-        'height'  => $height,
+      $this->getToolkit()->apply('scale', [
+        'width' => $width,
+        'height' => $height,
         'upscale' => TRUE,
-      ));
+      ]);
     }
     else {
       $src_ratio = round($this->getToolkit()->getWidth() / $this->getToolkit()
@@ -144,11 +144,11 @@ class ImageResize extends GDImageToolkitOperationBase {
         }
       }
 
-      $this->getToolkit()->apply('scale', array(
-        'width'   => $scaled_width,
-        'height'  => $scaled_height,
+      $this->getToolkit()->apply('scale', [
+        'width' => $scaled_width,
+        'height' => $scaled_height,
         'upscale' => TRUE,
-      ));
+      ]);
     }
 
     switch ($position) {

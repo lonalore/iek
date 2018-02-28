@@ -26,11 +26,11 @@ class ImageCorner extends GDImageToolkitOperationBase {
    * {@inheritdoc}
    */
   protected function arguments() {
-    return array(
-      'radius' => array(
+    return [
+      'radius' => [
         'description' => 'Radius',
-      ),
-    );
+      ],
+    ];
   }
 
   /**
@@ -48,7 +48,7 @@ class ImageCorner extends GDImageToolkitOperationBase {
   /**
    * {@inheritdoc}
    */
-  protected function execute(array $arguments = array()) {
+  protected function execute(array $arguments = []) {
     $data = $arguments;
 
     $width = $this->getToolkit()->getWidth();
@@ -62,7 +62,7 @@ class ImageCorner extends GDImageToolkitOperationBase {
       $g = rand(0, 255);
       $b = rand(0, 255);
     } while (imagecolorexact($this->getToolkit()
-        ->getResource(), $r, $g, $b) < 0);
+      ->getResource(), $r, $g, $b) < 0);
 
     $new_width = $width;
     $new_height = $height;
